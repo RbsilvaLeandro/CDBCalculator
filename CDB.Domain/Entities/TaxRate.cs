@@ -19,6 +19,7 @@ public class TaxRate
                 return rate.Value;
             }
         }
+
         throw new ArgumentException("Invalid months value.");
     }
 }
