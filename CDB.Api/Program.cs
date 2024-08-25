@@ -1,5 +1,4 @@
 using CDB.Infra;
-using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
 builder.Services.AddInfrastructure();
-
 
 var app = builder.Build();
 app.UseCors(options => options.WithOrigins("http://localhost:3000").AllowAnyMethod());

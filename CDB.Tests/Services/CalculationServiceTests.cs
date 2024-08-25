@@ -102,8 +102,8 @@ public class CalculationServiceTests
 
         var response = _service.Calculate(request);
 
-        Assert.That(response.GrossReturn, Is.EqualTo(1m * (1 + (0.009m * 1.08m))), "GrossReturn is incorrect.");
-        Assert.That(response.NetReturn, Is.EqualTo(response.GrossReturn * (1 - 0.225m)), "NetReturn is incorrect.");
+        Assert.That(response.GrossReturn, Is.EqualTo(1.00972), "GrossReturn is incorrect.");
+        Assert.That(response.NetReturn, Is.EqualTo(0.782533), "NetReturn is incorrect.");
     }
 
     [Test]
