@@ -17,6 +17,7 @@ namespace CDB.Services.Services
 
         public InvestmentResponse Calculate(InvestmentRequestDto request)
         {
+            //Validating Request
             if (request.Months < 1 || request.InitialValue <= 0)
             {
                 throw new ArgumentException("Invalid investment parameters.");
