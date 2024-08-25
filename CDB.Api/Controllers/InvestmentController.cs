@@ -23,6 +23,7 @@ namespace CDB.Api.Controllers
             {
                 return BadRequest("Request cannot be null.");
             }
+
             try
             {
                 var result = _calculationService.Calculate(request);
